@@ -7,6 +7,7 @@ import br.com.socialconnect.api.doacoes.model.TipoDoacao;
 import br.com.socialconnect.api.doacoes.repository.DoacaoRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,15 +32,17 @@ public class DoacaoService {
     public Page<DoacaoResponseDTO> listar(
             LocalDate dataInicio, LocalDate dataFim, TipoDoacao tipo, Pageable pageable) {
 
-        Page<Doacao> page;
-
-        if (dataInicio != null && dataFim != null && tipo != null) {
-            page = repository.findByDataDoacaoBetweenAndTipo(dataInicio, dataFim, tipo, pageable);
-        } else {
-            page = repository.findAll(pageable);
+        Specification<Doacao> filtros = (root, query, cb) -> cb.conjunction();
+        if (dataInicio != null) {
+            filtros = filtros.and((root, query, cb) -> cb.greaterThanOrEqualTo(root.get("dataDoacao"), dataInicio));
         }
-
-        return page.map(this::toDTO);
+        if (dataFim != null) {
+            filtros = filtros.and((root, query, cb) -> cb.lessThanOrEqualTo(root.get("dataDoacao"), dataFim));
+        }
+        if (tipo != null) {
+            filtros = filtros.and((root, query, cb) -> cb.equal(root.get("tipo"), tipo));
+        }
+        return repository.findAll(filtros, pageable).map(this::toDTO);
     }
 
     private Doacao toEntity(DoacaoRequestDTO dto) {

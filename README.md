@@ -134,6 +134,10 @@ que não existe na base. A V3 agora acrescenta somente índices. A V4 cria `prod
 Foi incluído o starter Flyway do Spring Boot 4 e o suporte PostgreSQL; as dependências
 Testcontainers foram alinhadas ao BOM do Spring Boot.
 
+Na verificação dos endpoints, também foi corrigida a listagem de doações:
+os filtros de tipo, data inicial e data final agora funcionam isoladamente ou
+combinados, com cobertura em `DoacaoFiltrosIntegrationTest`.
+
 Esta entrega parte de um banco novo. Não aplique esta revisão da V3 diretamente a um banco
 antigo que já registre outro checksum dessa migration.
 
