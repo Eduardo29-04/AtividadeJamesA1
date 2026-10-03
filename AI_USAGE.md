@@ -18,7 +18,7 @@ Para cada aula ou entrega, registre abaixo:
 
 | Data | Aula | Ferramenta | Prompt (resumo) | Uso da saída |
 |------|------|------------|-----------------|--------------|
-|  |  |  |  |  |
+| 02/10/2026 | Avaliação A1 | OpenAI Codex | Implementar o módulo de produtos conforme o enunciado, corrigir erros e testar os endpoints. | Apoio na implementação do código, correção de erros, criação e execução de testes e documentação, agilizando a produção do trabalho. |
 
 ---
 
@@ -26,12 +26,16 @@ Para cada aula ou entrega, registre abaixo:
 
 ### Ferramentas utilizadas
 
+- [x] OpenAI Codex
 - [ ] ChatGPT / Claude / Gemini
 - [ ] Copilot / Codeium
 - [ ] Nenhuma
 
 ### Como utilizei
 
+Utilizei o OpenAI Codex para me ajudar a corrigir erros no código e agilizar a
+produção do trabalho. A ferramenta também auxiliou na implementação do módulo
+de produtos, na criação e execução dos testes dos endpoints e na documentação.
 
 ### O que eu entendo
 
