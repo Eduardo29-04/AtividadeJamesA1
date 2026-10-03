@@ -18,9 +18,22 @@ Para cada aula ou entrega, registre abaixo:
 
 | Data | Aula | Ferramenta | Prompt (resumo) | Uso da saída |
 |------|------|------------|-----------------|--------------|
-| _dd/mm/aaaa_ | _Aula XX_ | _ex: ChatGPT_ | _ex: "Como injetar dependência via construtor no Spring?"_ | _ex: "Adaptei o exemplo ao meu Service"_ |
+|  |  |  |  |  |
 
 ---
 
-_Declaração: Ao submeter este repositório, confirmo que todo o código foi
-revisado, testado e compreendido por mim._
+## Declaração de Uso de IA (A1)
+
+### Ferramentas utilizadas
+
+- [ ] ChatGPT / Claude / Gemini
+- [ ] Copilot / Codeium
+- [ ] Nenhuma
+
+### Como utilizei
+
+
+### O que eu entendo
+
+
+### O que precisei estudar mais
